@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">@color/app</color>
+    <color name="colorSecondary">@color/app</color>
+    <color name="colorPrimaryDark">#FF6124</color>
+    <color name="colorAccent">#333333</color>
+
+    <color name="action_bar_background">#00ffffff</color>
+    <color name="transparent">#00ffffff</color>
+    <color name="grass">#43b02a</color>
+    <color name="app">#F60000</color>
+
+    <color name="light_grey_blue">#a2a7ba</color>
+    <color name="light_blue_grey">#caced8</color>
+    <color name="slate">#444b62</color>
+    <color name="cherry">#e20041</color>
+    <color name="blue">#0071ce</color>
+    <color name="cerulean">#086fce</color>
+
+    <color name="black_overlay">#66000000</color>
+    <color name="soft_gray_overlay">#8029292B</color>
+
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="background">@color/gray2</color>
+    <color name="color_accent">#e40046</color>
+    <color name="color_dark_green">#007A33</color>
+    <color name="color_dark_orange">#FF5F00</color>
+    <color name="color_dark_red">#9B2743</color>
+    <color name="color_main_green">#43b02a</color>
+    <color name="color_main_orange">#FFB500</color>
+    <color name="color_main_red">#E20041</color>
+    <color name="color_on_surface">#43b02a</color>
+    <color name="color_primary">#43b02a</color>
+    <color name="color_primary_dark">#ffffff</color>
+    <color name="color_red_error">#CE3A37</color>
+    <color name="color_red_error_2">#E10034</color>
+    <color name="color_secondary">#43b02a</color>
+    <color name="extra_white">#ffffff</color>
+    <color name="gray10">#E4E6EB</color>
+    <color name="gray100">#16181F</color>
+    <color name="gray2">#FAFAFA</color>
+    <color name="gray20">#CACED8</color>
+    <color name="gray40">#A2A7BA</color>
+    <color name="gray5">#F8F8F8</color>
+    <color name="gray60">#838AA2</color>
+    <color name="gray7">#F5F6F7</color>
+    <color name="gray80">#444b62</color>
+</resources>
