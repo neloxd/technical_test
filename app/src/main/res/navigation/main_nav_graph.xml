@@ -15,21 +15,75 @@
             app:destination="@id/emailFragment"
             app:popUpTo="@id/splashFragment"
             app:popUpToInclusive="true" />
-<!--        <action-->
-<!--            android:id="@+id/action_splashFragment_to_dashboardFragment"-->
-<!--            app:destination="@id/dashboardFragment"-->
-<!--            app:popUpTo="@id/splashFragment"-->
-<!--            app:popUpToInclusive="true" />-->
+        <action
+            android:id="@+id/action_splashFragment_to_DashboardFragment"
+            app:destination="@id/dashboardFragment"
+            app:popUpTo="@id/splashFragment"
+            app:popUpToInclusive="true" />
     </fragment>
+
+    <action
+        android:id="@+id/action_to_transference"
+        app:destination="@id/transferenceFragment"/>
+
+    <action
+        android:id="@+id/action_to_dashboard"
+        app:destination="@id/dashboardFragment"/>
+
+    <action
+        android:id="@+id/action_to_bank_transference"
+        app:destination="@id/bankTransferenceFragment"/>
+
+    <action
+        android:id="@+id/action_to_profile"
+        app:destination="@id/profileFragment"/>
+
+    <fragment
+        android:id="@+id/dashboardFragment"
+        android:name="com.jesus.villa.technicaltest.presentation.dashboard.DashboardFragment"
+        android:label=""
+        tools:layout="@layout/fragment_dashboard"/>
+
+    <fragment
+        android:id="@+id/transferenceFragment"
+        android:name="com.jesus.villa.technicaltest.presentation.transference.TransferenceFragment"
+        android:label=""
+        tools:layout="@layout/fragment_transference"/>
+
+    <fragment
+        android:id="@+id/bankTransferenceFragment"
+        android:name="com.jesus.villa.technicaltest.presentation.banktransference.BankTransferenceFragment"
+        android:label=""
+        tools:layout="@layout/fragment_bank_transference"/>
+
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.jesus.villa.technicaltest.presentation.profile.ProfileFragment"
+        android:label=""
+        tools:layout="@layout/fragment_profile"/>
 
     <fragment
         android:id="@+id/emailFragment"
         android:name="com.jesus.villa.technicaltest.presentation.login.EmailFragment"
         android:label=""
         tools:layout="@layout/fragment_email">
-<!--        <action-->
-<!--            android:id="@+id/action_welcome_to_pass"-->
-<!--            app:destination="@id/nav_graph_login" />-->
+        <action
+            android:id="@+id/action_welcome_to_pass"
+            app:destination="@id/pinPassFragment"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/pinPassFragment"
+        android:name="com.jesus.villa.technicaltest.presentation.login.PassFragment"
+        android:label=""
+        tools:layout="@layout/fragment_email">
+
+        <action
+            android:id="@+id/action_pinPassFragment_to_dashboardFragment"
+            app:destination="@id/dashboardFragment"
+            app:popUpTo="@id/pinPassFragment"
+            app:popUpToInclusive="true" />
+
     </fragment>
 
     <!-- endregion Fragment-->

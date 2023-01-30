@@ -48,4 +48,8 @@ class TestApplication : Application() {
         }
 
     }
+
+    private fun initModules() {
+        OperationModule
+    }
 }

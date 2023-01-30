@@ -15,6 +15,8 @@ import androidx.fragment.app.Fragment
 interface BaseActivity{
     fun showLoading()
     fun hideLoading()
+
+    fun showNavigation(show: Boolean)
 }
 
 open class BaseFragment : Fragment() {
@@ -206,6 +208,20 @@ open class BaseFragment : Fragment() {
             imm.hideSoftInputFromWindow(view.windowToken, InputMethodManager.HIDE_NOT_ALWAYS)
         }
     }
+
+    fun showKeyboard(view: View) {
+        context?.let {
+            val imm = it.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+            imm.showSoftInput(view, InputMethodManager.SHOW_FORCED)
+        }
+    }
+
+    fun showNavigation(show: Boolean) {
+        if(activity is BaseActivity){
+            (activity as BaseActivity).showNavigation(show)
+        }
+    }
+
 
 }
 

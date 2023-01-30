@@ -19,6 +19,9 @@
 
     <color name="black_overlay">#66000000</color>
     <color name="soft_gray_overlay">#8029292B</color>
+    <color name="divider">#DBDBDB</color>
+    <color name="detail_transaction">#B1B1B1</color>
+    <color name="arrow_color">#9FACBD</color>
 
     <color name="purple_200">#FFBB86FC</color>
     <color name="purple_500">#FF6200EE</color>
@@ -27,6 +30,14 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="form_color">#D9D9D9</color>
+    <color name="bc_color">#FF6F1F</color>
+    <color name="bc_color_pressed">#FF6338</color>
+    <color name="fillex_box_layout">#969696</color>
+    <color name="bg_color_unselected_item">#BEBEBE</color>
+    <color name="bg_color_detail">#F3F3F3</color>
+
+    <color name="income_in">#00C766</color>
 
     <color name="background">@color/gray2</color>
     <color name="color_accent">#e40046</color>

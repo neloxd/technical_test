@@ -1,6 +1,7 @@
 package com.jesus.villa.technicaltest.presentation.welcome
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -24,6 +25,7 @@ class SplashFragment : BaseFragment(), CoroutineScope {
          * The number of milliseconds to wait to move to the next screen.
          */
         private const val SPLASH_DELAY_MILLIS = 2500L
+        private const val TAG = "SplashFragment"
 
     }
 
@@ -52,13 +54,17 @@ class SplashFragment : BaseFragment(), CoroutineScope {
                 if (!cancelDelay) nextPage()
             }
         }
+
+        showNavigation(false)
     }
 
     private fun nextPage() {
-        if (!Session.isLoggedIn())
+        val isLogged = Session.isLoggedIn()
+        val user = Session.userData
+        Log.i(TAG,"nextPage:$isLogged - user:$user")
+        if (!isLogged)
             findNavController().safeNavigate(SplashFragmentDirections.actionSplashFragmentToEmailFragment())
-        //  findNavController().safeNavigate(SplashFragmentDirections.actionSplashFragmentToDashboardFragment())
-        //else {
-        //}
+        else
+            findNavController().safeNavigate(SplashFragmentDirections.actionSplashFragmentToDashboardFragment())
     }
 }

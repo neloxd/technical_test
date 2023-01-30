@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <import type="android.view.View" />
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/ic_bg_login">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/enter_pin"
+            android:textColor="#B1B1B1"
+            android:textSize="11sp"
+            android:gravity="center_horizontal"
+            app:layout_constraintVertical_bias="0.45"
+            app:layout_constraintBottom_toTopOf="@+id/pinContainer"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/pinContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintVertical_bias="0.75"
+            app:layout_constraintBottom_toTopOf="@+id/sendButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/pinOne"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_pin_enable"
+                android:layout_marginHorizontal="12sp"
+                app:layout_constraintBottom_toBottomOf="@+id/pinTwo"
+                app:layout_constraintEnd_toStartOf="@+id/pinTwo"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/pinTwo" />
+
+            <ImageView
+                android:id="@+id/pinTwo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_pin_enable"
+                android:layout_marginHorizontal="12sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/pinThree"
+                app:layout_constraintStart_toEndOf="@+id/pinOne"
+                />
+
+            <ImageView
+                android:id="@+id/pinThree"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_pin_enable"
+                android:layout_marginHorizontal="12sp"
+                app:layout_constraintBottom_toBottomOf="@+id/pinTwo"
+                app:layout_constraintTop_toTopOf="@+id/pinTwo"
+                app:layout_constraintStart_toEndOf="@+id/pinTwo"
+                app:layout_constraintEnd_toStartOf="@+id/pinFour"
+                />
+
+            <ImageView
+                android:id="@+id/pinFour"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_pin_enable"
+                android:layout_marginHorizontal="12sp"
+                app:layout_constraintBottom_toBottomOf="@+id/pinThree"
+                app:layout_constraintTop_toTopOf="@+id/pinThree"
+                app:layout_constraintStart_toEndOf="@+id/pinThree"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:src="@drawable/ic_pin_disable"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <Button
+            android:id="@+id/sendButton"
+            style="@style/Button.Primary"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:text="@string/send_text"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.5" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <EditText
+                android:id="@+id/editText"
+                android:layout_width="100dp"
+                android:layout_height="20dp"
+                android:inputType="number"
+                android:focusable="true"
+                android:clickable="true"
+                android:digits="0123456789"
+                android:singleLine="true"
+                android:focusableInTouchMode="true" />
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

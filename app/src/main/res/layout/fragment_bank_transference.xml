@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <import type="android.view.View" />
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/titleBankTransfer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/bank_transference_title"
+            android:textSize="21sp"
+            android:textColor="@color/white"
+            android:layout_marginTop="32dp"
+            android:layout_marginBottom="16dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/accountContainer"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/accountContainer"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/round_corners"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/titleBankTransfer"
+            app:layout_constraintBottom_toTopOf="@+id/supportContainer"
+            app:layout_constraintHeight_percent="0.50">
+
+            <TextView
+                android:id="@+id/accountNumberTitlte"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="CVU"
+                android:textSize="16sp"
+                android:textColor="@color/colorAccent"
+                android:layout_marginBottom="8dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/accountNumberText"
+                android:layout_width="0dp"
+                android:gravity="center_horizontal"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="0000000055403112850891"
+                android:lineSpacingExtra="-4sp"
+                android:textSize="24sp"
+                android:textColor="@color/colorAccent"
+                android:layout_marginStart="20sp"
+                android:layout_marginBottom="8dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/accountNumberTitlte"
+                app:layout_constraintBottom_toTopOf="@+id/copyView"/>
+
+            <ImageView
+                android:id="@+id/copyView"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:background="@drawable/ic_bg_transaction"
+                android:src="@drawable/ic_account_number"
+                android:scaleType="center"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="16dp"
+                app:layout_constraintTop_toBottomOf="@+id/accountNumberText"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toTopOf="@+id/divider"/>
+
+            <View
+                android:id="@+id/divider"
+                android:layout_width="0dp"
+                android:layout_height="1.5dp"
+                android:layout_marginHorizontal="16dp"
+                android:background="@color/divider"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                app:layout_constraintTop_toBottomOf="@+id/copyView"
+                app:layout_constraintBottom_toTopOf="@+id/aliasTitlte"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/aliasTitlte"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Alias"
+                android:textSize="16sp"
+                android:textColor="@color/colorAccent"
+                android:layout_marginBottom="8dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/divider" />
+
+            <TextView
+                android:id="@+id/aliasText"
+                android:layout_width="0dp"
+                android:gravity="center_horizontal"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                tools:text="jvillasan"
+                android:lineSpacingExtra="-4sp"
+                android:textSize="24sp"
+                android:textColor="@color/colorAccent"
+                android:layout_marginStart="20sp"
+                android:layout_marginBottom="8dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/aliasTitlte" />
+
+            <ImageView
+                android:id="@+id/copyAliasView"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:background="@drawable/ic_bg_transaction"
+                android:src="@drawable/ic_account_number"
+                android:scaleType="center"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="16dp"
+                app:layout_constraintTop_toBottomOf="@+id/aliasText"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/supportContainer"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@color/bg_color_detail"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/accountContainer"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <TextView
+                android:id="@+id/helpTransferTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/detail_transaction"
+                android:text="Cómo transferir"
+                android:layout_marginTop="32dp"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <View
+                android:id="@+id/dividerSupport"
+                android:layout_width="0dp"
+                android:layout_height="1.5dp"
+                android:background="@color/divider"
+                android:layout_marginVertical="16dp"
+                app:layout_constraintTop_toBottomOf="@+id/helpTransferTitle"
+                app:layout_constraintBottom_toTopOf="@+id/helpTransferTitleOne"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/helpTransferTitleOne"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/detail_transaction"
+                android:text="@string/help_one_text"
+                android:layout_marginTop="16dp"
+                android:textSize="15sp"
+                android:gravity="center_horizontal"
+                android:layout_marginHorizontal="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/dividerSupport"
+                app:layout_constraintBottom_toTopOf="@+id/helpTransferTitleTwo"/>
+
+            <TextView
+                android:id="@+id/helpTransferTitleTwo"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/detail_transaction"
+                android:text="@string/help_two_text"
+                android:layout_marginTop="16dp"
+                android:textSize="15sp"
+                android:gravity="center_horizontal"
+                android:layout_marginHorizontal="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/helpTransferTitleOne"
+                app:layout_constraintBottom_toTopOf="@+id/helpTransferTitleThree"/>
+
+            <TextView
+                android:id="@+id/helpTransferTitleThree"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/detail_transaction"
+                android:text="@string/help_three_text"
+                android:layout_marginTop="16dp"
+                android:textSize="15sp"
+                android:gravity="center_horizontal"
+                android:layout_marginHorizontal="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/helpTransferTitleTwo" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

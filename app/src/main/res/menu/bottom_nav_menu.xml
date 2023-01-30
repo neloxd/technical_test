@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/bottom_nav_home"
+        android:icon="@drawable/ic_home"
+        android:title="@string/home_title"
+        />
+
+    <item
+        android:id="@+id/bottom_nav_transfer"
+        android:icon="@drawable/ic_transfer"
+        android:title="@string/transfer_title"
+        />
+
+    <item
+        android:id="@+id/bottom_nav_bank_transfer"
+        android:icon="@drawable/ic_bank_transfer"
+        android:title="@string/bank_transfer_title"
+        />
+
+    <item
+        android:id="@+id/bottom_nav_profile"
+        android:icon="@drawable/ic_profile"
+        android:title="@string/profile_title"
+        />
+
+</menu>

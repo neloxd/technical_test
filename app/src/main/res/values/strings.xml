@@ -1,4 +1,21 @@
 <resources>
     <string name="app_name">Technical Test</string>
     <string name="logo_ovu">logo_ovu</string>
+    <string name="email_text_input_hint">Correo electrónico</string>
+    <string name="send_text">ENVIAR</string>
+    <string name="enter_pin">Ingresá tu PIN</string>
+
+    <string name="welcome_user_text">Bienvenido: <b>%s</b></string>
+    <string name="money_in_account">DINERO EN CUENTA</string>
+    <string name="home_title">Inicio</string>
+    <string name="transfer_title">Transferir</string>
+    <string name="bank_transfer_title">Transferencia bancaria</string>
+    <string name="profile_title">Mi perfil</string>
+    <string name="last_activity">Ultima actividad</string>
+    <string name="last_activity_title">Última actividad</string>
+    <string name="contacts_title">Contactos</string>
+    <string name="bank_transference_title">Transferencia bancaria</string>
+    <string name="help_one_text">1. Copia tu CVU o usuario de Gollet.</string>
+    <string name="help_two_text">2. Ingresa al Home Banking del banco y dirigete a la sección transferencias.</string>
+    <string name="help_three_text">3. Completa los datos de tu CVU y listo!</string>
 </resources>

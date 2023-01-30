@@ -26,6 +26,12 @@ class PersistenceRepository : IPersistenceRepository {
             getDefaultSharedPreferencesName(mContext),
             getDefaultSharedPreferencesMode()
         ) ?: return
+
+        with(sharedPref.edit()) {
+            val text = Gson().toJson(user)
+            putString(REMEMBER_USER, text)
+            commit()
+        }
     }
 
     override fun recoverRememberedUser(): UserData? {
@@ -45,6 +51,21 @@ class PersistenceRepository : IPersistenceRepository {
             }
         }
         return null
+    }
+
+    override fun removeRememberedUser() {
+        val mContext = Core.instance.context
+
+        val sharedPref = mContext.getSharedPreferences(
+            getDefaultSharedPreferencesName(mContext),
+            getDefaultSharedPreferencesMode()
+        ) ?: return
+
+        with(sharedPref.edit()) {
+            remove(REMEMBER_USER)
+            remove(REMEMBER_USER + "secret")
+            commit()
+        }
     }
 
     override fun putString(key: String, value: String) {

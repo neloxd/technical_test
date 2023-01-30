@@ -1,7 +1,10 @@
 package com.jesus.villa.technicaltest.util
 
+import android.content.ClipData
+import android.content.ClipboardManager
 import android.content.Context
 import android.provider.Settings
+import android.util.Log
 import java.util.*
 
 
@@ -85,4 +88,32 @@ fun getDefaultSharedPreferencesName(context: Context): String {
 
 fun getDefaultSharedPreferencesMode(): Int {
     return Context.MODE_PRIVATE
+}
+
+fun String.getTwoCharacteres(): String {
+    val tokenizer = StringTokenizer(this)
+    Log.i("String-TAG"," tokenizer:${tokenizer.countTokens()}")
+    var first: String? = null
+    var last: String? = null
+
+    var index = 0
+    var size = tokenizer.countTokens() - 1
+    while(tokenizer.hasMoreTokens()) {
+        val str = tokenizer.nextToken()
+        if(index == 0)
+            first = str.first().toString()
+
+        if(index == size)
+            last = str.first().toString()
+        ++index;
+    }
+
+    return ("$first$last")
+}
+
+fun Context.copyText(text: String) {
+    val clipboard: ClipboardManager =
+        this.getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
+    val clip: ClipData = ClipData.newPlainText("Goiar", text)
+    clipboard.setPrimaryClip(clip)
 }

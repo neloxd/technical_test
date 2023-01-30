@@ -14,11 +14,11 @@ data class UserData(
     @SerializedName("customer_id")
     val customerId: String,
     @SerializedName("full_name")
-    val fullName: String,
+    var fullName: String,
     @SerializedName("email")
-    val email: String,
+    var email: String,
     @SerializedName("payment_methods")
-    val paymentMethods: List<PaymentMethod>?
+    val paymentMethods: List<PaymentMethod>? = listOf()
 
 ) : Parcelable
 

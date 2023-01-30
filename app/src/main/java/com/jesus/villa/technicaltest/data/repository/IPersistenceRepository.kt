@@ -15,6 +15,9 @@ interface IPersistenceRepository {
     fun recoverRememberedUser() : UserData?
 
     @Throws(Exception::class)
+    fun removeRememberedUser()
+
+    @Throws(Exception::class)
     fun putString(key: String, value: String)
     fun getString(key: String, defaultValue: String): String
     fun putBoolean(key: String, value: Boolean)
